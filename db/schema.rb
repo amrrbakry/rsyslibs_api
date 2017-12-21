@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221151012) do
+ActiveRecord::Schema.define(version: 20171221183302) do
 
   create_table "dependencies_system_libraries", force: :cascade do |t|
     t.integer "project_dependency_id"
@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20171221151012) do
     t.string "version"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "github_url"
+    t.string "website"
+    t.string "owner_name"
   end
 
   create_table "system_libraries", force: :cascade do |t|
