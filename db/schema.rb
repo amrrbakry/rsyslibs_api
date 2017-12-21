@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221145624) do
+ActiveRecord::Schema.define(version: 20171221151012) do
+
+  create_table "dependencies_system_libraries", force: :cascade do |t|
+    t.integer "project_dependency_id"
+    t.integer "system_library_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_dependency_id"], name: "index_dependencies_system_libraries_on_project_dependency_id"
+    t.index ["system_library_id"], name: "index_dependencies_system_libraries_on_system_library_id"
+  end
 
   create_table "project_dependencies", force: :cascade do |t|
     t.string "name"
