@@ -1,3 +1,7 @@
+AllCops:
+  Exclude:
+    - db/*
+    - db/migrate/*
 Metrics/LineLength:
   Max: 170
 Metrics/BlockLength:
