@@ -45,28 +45,29 @@ We're glad to receive any contribution to the directory. Simply, provide a depen
 # POST /add_syslibs
 
 {
-	"name": "Nokogiri", # required
-	"version": '0.1.0', # optional
-	"github_url": "https://github.com/sparklemotion/nokogiri", # optional
-	"website": "http://www.nokogiri.org", # optional
-	"owner_name": "Nokogiri", # optional
-	"system_libraries": [
-		{
-			"name": "ruby-dev", # required
-			"os": "darwin16", # required
-			"os_bits": 64, # optional
-			"os_vendor": "apple" # optional
-		},
-		{
-			"name": "zlib-devel",
-			"os": "centOS"
-		}
+  "name": "Nokogiri", # required
+  "version": '0.1.0', # optional
+  "github_url": "https://github.com/sparklemotion/nokogiri", # optional
+  "website": "http://www.nokogiri.org", # optional
+  "owner_name": "Nokogiri", # optional
+  "system_libraries": [
+    {
+		    "name": "ruby-dev", # required
+        "os": "darwin16", # required
+        "os_bits": 64, # optional
+        "os_vendor": "apple" # optional
+    },
+    {
+      "name": "zlib-devel",
+      "os": "centOS"
+    }
 		# ...
-	]
+  ]
 }
 ```
 ---
 `GET /project_dependencies`
+
 List all project dependencies in the directory
 ```ruby
 # GET /project_dependencies
@@ -93,6 +94,7 @@ List all project dependencies in the directory
 ```
 ---
 `GET /system_libraries`
+
 List all system libraries in the directory
 ```ruby
 # GET /system_libraries
