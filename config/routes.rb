@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :api, path: '' do
+    resources :project_dependencies, only: :index
+    resources :system_libraries, only: :index
+    post 'lookup_syslibs', to: 'lookups#index'
+    post 'add_syslibs', to: 'contributions#create'
+  end
 end
