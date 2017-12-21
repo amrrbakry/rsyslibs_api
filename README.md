@@ -3,11 +3,12 @@ A database-driven RESTful API that looks up required system-level libraries need
 ## Usage
 ##### Endpoints
 `POST /lookup_syslibs`
+
 Look up required system-level packaged for your project dependencies with an array of dependencies' names and os info.
 ```ruby
-POST /lookup_syslibs
+# POST /lookup_syslibs
 {
-	"project_dependencies": ["nokogri"], # required
+  "project_dependencies": ["nokogri"], # required
 	"os_info": {
 		"os": "darwin16", # required
 		"os_bits": 64, # optional
@@ -38,8 +39,11 @@ Response:
 ```
 ---
 `POST /add_syslibs`
+
 We're glad to receive any contribution to the directory. Simply, provide a dependency name, version and its required system-level libs for each operating system.
 ```ruby
+# POST /add_syslibs
+
 {
 	"name": "Nokogiri", # required
 	"version": '0.1.0', # optional
@@ -61,9 +65,12 @@ We're glad to receive any contribution to the directory. Simply, provide a depen
 	]
 }
 ```
+---
 `GET /project_dependencies`
 List all project dependencies in the directory
 ```ruby
+# GET /project_dependencies
+
 [
     {
         "id": 13,
@@ -84,9 +91,12 @@ List all project dependencies in the directory
     # ...
 ]
 ```
+---
 `GET /system_libraries`
 List all system libraries in the directory
 ```ruby
+# GET /system_libraries
+
 [
     {
         "id": 6,
