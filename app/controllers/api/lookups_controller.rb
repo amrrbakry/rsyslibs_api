@@ -22,7 +22,8 @@ module Api
 
       return render json: { error: 'project_dependencies should be an array of dependencies' }, status: 400 unless params[:project_dependencies].is_a?(Array)
 
-      @project_dependencies = ProjectDependency.where(name: params[:project_dependencies])
+      project_dependencies = params[:project_dependencies].map(&:downcase)
+      @project_dependencies = ProjectDependency.where(name: project_dependencies)
     end
 
     def set_os_info
