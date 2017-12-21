@@ -17,6 +17,7 @@ module Api
     def set_project_dependency
       return render json: { error: 'Missing required param name' }, status: 400 unless permitted_params[:name]
 
+      permitted_params[:name] = permitted_params[:name].downcase!
       @project_dependency = ProjectDependency.where(name: permitted_params[:name]).first_or_initialize(permitted_params.except(:system_libraries))
 
       return render json: @project_dependency.errors, status: 422 if @project_dependency.new_record? && !@project_dependency.save
@@ -27,6 +28,8 @@ module Api
 
       @syslibs = []
       permitted_params[:system_libraries].each do |syslib|
+        syslib['name'] = syslib['name'].downcase
+        syslib['os'] = syslib['os'].downcase
         slib = SystemLibrary.where(name: syslib['name'], os: syslib['os']).first_or_initialize(syslib)
         return render json: slib.errors, status: 422 if slib.new_record? && !slib.save
 
