@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221145202) do
+ActiveRecord::Schema.define(version: 20171221145624) do
 
   create_table "project_dependencies", force: :cascade do |t|
     t.string "name"
     t.string "version"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "system_libraries", force: :cascade do |t|
+    t.string "name"
+    t.string "version"
+    t.string "os"
+    t.integer "os_bits"
+    t.string "os_vendor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
