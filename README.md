@@ -47,7 +47,7 @@ We're glad to receive any contribution to the directory. Simply, provide a depen
 
 {
   "name": "Nokogiri", # required
-  "version": '0.1.0', # optional
+  "version": "0.1.0", # optional
   "github_url": "https://github.com/sparklemotion/nokogiri", # optional
   "website": "http://www.nokogiri.org", # optional
   "owner_name": "Nokogiri", # optional
