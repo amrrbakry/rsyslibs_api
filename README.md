@@ -2,7 +2,11 @@
 A database-driven RESTful API that looks up required system-level libraries needed for installing a ruby project dependencies.
 ## Usage
 ##### Endpoints
-`POST /lookup_syslibs`
+
+```ruby
+POST /lookup_syslibs
+```
+
 
 Look up required system-level packaged for your project dependencies with an array of dependencies' names and os info.
 ```ruby
@@ -38,7 +42,10 @@ Response:
 ]
 ```
 ---
-`POST /add_syslibs`
+```ruby
+POST /add_syslibs
+```
+
 
 We're glad to receive any contribution to the directory. Simply, provide a dependency name, version and its required system-level libs for each operating system.
 ```ruby
@@ -66,7 +73,10 @@ We're glad to receive any contribution to the directory. Simply, provide a depen
 }
 ```
 ---
-`GET /project_dependencies`
+```ruby
+GET /project_dependencies
+```
+
 
 List all project dependencies in the directory
 ```ruby
@@ -93,7 +103,9 @@ List all project dependencies in the directory
 ]
 ```
 ---
-`GET /system_libraries`
+```ruby
+GET /system_libraries
+```
 
 List all system libraries in the directory
 ```ruby
