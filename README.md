@@ -53,10 +53,10 @@ We're glad to receive any contribution to the directory. Simply, provide a depen
   "owner_name": "Nokogiri", # optional
   "system_libraries": [
     {
-		    "name": "ruby-dev", # required
-        "os": "darwin16", # required
-        "os_bits": 64, # optional
-        "os_vendor": "apple" # optional
+      "name": "ruby-dev", # required
+      "os": "darwin16", # required
+      "os_bits": 64, # optional
+      "os_vendor": "apple" # optional
     },
     {
       "name": "zlib-devel",
