@@ -3,6 +3,8 @@ A database-driven RESTful API that looks up required system-level libraries need
 ## Usage
 ##### Endpoints
 
+**API BASE URL:** `https://rsyslibsapi.herokuapp.com`
+
 `POST /lookup_syslibs`
 
 Look up required system-level packaged for your project dependencies with an array of dependencies' names and os info.
