@@ -1,9 +1,11 @@
 # Rsyslibs API
 A database-driven RESTful API that looks up required system-level libraries needed for installing a ruby project dependencies.
 ## Usage
-##### Endpoints
+### Endpoints
 
 **API BASE URL:** `https://rsyslibsapi.herokuapp.com`
+
+---
 
 `POST /lookup_syslibs`
 
